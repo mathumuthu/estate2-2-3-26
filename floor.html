@@ -33,78 +33,82 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     </div>
 </div>
 <!-- PRELOADER END -->
- <style>/* ===== PRELOADER ===== */
-
-#preloader {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: #0f172a;
-    z-index: 9999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.6s ease;
+ <!-- PRELOADER END -->
+<style>
+#preloader{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100vh;
+background:#0f172a;
+z-index:9999;
+display:flex;
+justify-content:center;
+align-items:center;
+transition:opacity 0.5s ease;
 }
 
-.loader {
-    text-align: center;
+.loader{
+text-align:center;
 }
 
-.home-icon {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    border: 5px solid #1e293b;
-    border-top: 5px solid #22c55e;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: spin 1.2s linear infinite;
+.home-icon{
+width:70px;
+height:70px;
+border-radius:50%;
+border:4px solid #1e293b;
+border-top:4px solid #22c55e;
+display:flex;
+justify-content:center;
+align-items:center;
+animation:spin 0.8s linear;
 }
 
-.home-icon i {
-    color: #22c55e;
-    font-size: 30px;
+.home-icon i{
+color:#22c55e;
+font-size:26px;
 }
 
-.loading-text {
-    color: #fff;
-    margin-top: 15px;
-    display: block;
-    font-size: 16px;
+.loading-text{
+color:#fff;
+margin-top:10px;
+display:block;
+font-size:14px;
 }
 
-/* Animation */
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+/* Only once spin */
+@keyframes spin{
+0%{transform:rotate(0deg);}
+100%{transform:rotate(360deg);}
 }
 
-/* MOBILE RESPONSIVE */
+/* MOBILE */
 @media(max-width:768px){
-    .home-icon{
-        width:60px;
-        height:60px;
-    }
-    .home-icon i{
-        font-size:22px;
-    }
-}</style>
+.home-icon{
+width:55px;
+height:55px;
+}
+.home-icon i{
+font-size:20px;
+}
+}
+</style>
 <script>
-window.addEventListener("load", function(){
+document.addEventListener("DOMContentLoaded", function(){
+
     const preloader = document.getElementById("preloader");
-    
-    preloader.style.opacity = "0";
-    preloader.style.visibility = "hidden";
-    
-    setTimeout(()=>{
-        preloader.style.display = "none";
-    },600);
+
+    setTimeout(function(){
+        preloader.style.opacity="0";
+
+        setTimeout(function(){
+            preloader.style.display="none";
+        },500);
+
+    },1000); // 👈 ONLY 1 SECOND
 });
-</script></script>
-
-
+</script>
 
 
 
@@ -748,9 +752,9 @@ window.addEventListener("load", function(){
     <section class="video-hero relative flex items-center justify-center">
         <!-- Background Video -->
         <video class="video-bg" autoplay muted loop playsinline>
-            <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-city-traffic-at-night-11-large.mp4" type="video/mp4">
+            <source src="">
             <!-- Fallback image if video doesn't load -->
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Luxury Interior">
+            <img src="home5 img (1).webp" alt="Luxury Interior">
         </video>
         
         <!-- Overlay -->
@@ -848,7 +852,7 @@ window.addEventListener("load", function(){
                     <div class="floor-card floor-item opacity-0 translate-y-12" data-category="3bhk">
                         <div class="floor-card-inner bg-white rounded-2xl overflow-hidden shadow-xl">
                             <div class="floor-viewer relative h-80 bg-gray-200">
-                                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                                <img src="house1.webp" 
                                      class="floor-image w-full h-full object-cover" alt="3 BHK Classic">
                                 <div class="floor-badge absolute top-4 left-4 bg-accent text-white px-4 py-2 rounded-full text-sm font-bold">
                                     3 BHK
@@ -908,7 +912,7 @@ window.addEventListener("load", function(){
                     <div class="floor-card floor-item opacity-0 translate-y-12" data-category="3bhk">
                         <div class="floor-card-inner bg-white rounded-2xl overflow-hidden shadow-xl">
                             <div class="floor-viewer relative h-80 bg-gray-200">
-                                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                                <img src="house2 (1).webp" 
                                      class="floor-image w-full h-full object-cover" alt="3 BHK Premium">
                                 <div class="floor-badge absolute top-4 left-4 bg-accent text-white px-4 py-2 rounded-full text-sm font-bold">
                                     3 BHK
@@ -980,7 +984,7 @@ window.addEventListener("load", function(){
                     <div class="floor-card floor-item opacity-0 translate-y-12" data-category="4bhk">
                         <div class="floor-card-inner bg-white rounded-2xl overflow-hidden shadow-xl">
                             <div class="floor-viewer relative h-80 bg-gray-200">
-                                <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                                <img src="house3.webp" 
                                      class="floor-image w-full h-full object-cover" alt="4 BHK Family">
                                 <div class="floor-badge absolute top-4 left-4 bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-bold">
                                     4 BHK
@@ -1035,7 +1039,7 @@ window.addEventListener("load", function(){
                     <div class="floor-card floor-item opacity-0 translate-y-12" data-category="4bhk">
                         <div class="floor-card-inner bg-white rounded-2xl overflow-hidden shadow-xl">
                             <div class="floor-viewer relative h-80 bg-gray-200">
-                                <img src="https://images.unsplash.com/photo-1600585154526-3d9c4c9f7a3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                                <img src="home4 img.webp" 
                                      class="floor-image w-full h-full object-cover" alt="4 BHK Deluxe">
                                 <div class="floor-badge absolute top-4 left-4 bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-bold">
                                     4 BHK
@@ -1103,7 +1107,7 @@ window.addEventListener("load", function(){
                     <div class="floor-card floor-item opacity-0 translate-y-12" data-category="5bhk">
                         <div class="floor-card-inner bg-white rounded-2xl overflow-hidden shadow-xl">
                             <div class="floor-viewer relative h-80 bg-gray-200">
-                                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                                <img src="home5 img (1).webp" 
                                      class="floor-image w-full h-full object-cover" alt="5 BHK Estate">
                                 <div class="floor-badge absolute top-4 left-4 bg-amber-600 text-white px-4 py-2 rounded-full text-sm font-bold">
                                     5 BHK
@@ -1158,7 +1162,7 @@ window.addEventListener("load", function(){
                     <div class="floor-card floor-item opacity-0 translate-y-12" data-category="penthouse">
                         <div class="floor-card-inner bg-white rounded-2xl overflow-hidden shadow-xl border-2 border-amber-400">
                             <div class="floor-viewer relative h-80 bg-gray-200">
-                                <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                                <img src="home7 img.webp" 
                                      class="floor-image w-full h-full object-cover" alt="Penthouse">
                                 <div class="floor-badge absolute top-4 left-4 bg-gradient-to-r from-amber-500 to-orange-600 text-white px-4 py-2 rounded-full text-sm font-bold">
                                     <i class="fas fa-crown mr-1"></i> Penthouse
@@ -1307,7 +1311,7 @@ window.addEventListener("load", function(){
             <div class="grid md:grid-cols-4 gap-12 mb-12">
                 <div>
                     <div class="text-xl font-black text-white mb-6 flex items-center gap-3">
-                        <img src="https://via.placeholder.com/45x45/2c5f4a/ffffff?text=S" alt="STACKLY" class="h-8 w-auto brightness-0 invert">
+                        <!-- <img src="logo.webp" alt="STACKLY" class="h-8 w-auto brightness-0 invert"> -->
                         STACKLY
                     </div>
                     <p class="text-gray-400 mb-6">Luxury living redefined. Experience the perfect blend of elegance, comfort, and nature.</p>
